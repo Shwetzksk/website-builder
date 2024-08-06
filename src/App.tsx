@@ -1,5 +1,3 @@
-import { useState } from "react";
-import "./App.css";
 import {
   Select,
   SelectContent,
@@ -7,26 +5,23 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Button } from "./components/ui/button";
-import { DesktopIcon, MobileIcon, TableIcon } from "@radix-ui/react-icons";
-import { BiTab } from "react-icons/bi";
-import {
-  IoClose,
-  IoTabletLandscapeOutline,
-  IoTabletPortraitOutline,
-} from "react-icons/io5";
+import { DesktopIcon, MobileIcon } from "@radix-ui/react-icons";
+import { useState } from "react";
 import { GrNavigate, GrRedo, GrUndo } from "react-icons/gr";
-import { VscPreview } from "react-icons/vsc";
+import { IoClose, IoTabletLandscapeOutline } from "react-icons/io5";
 import { RiFunctionAddFill, RiPagesLine } from "react-icons/ri";
+import { VscPreview } from "react-icons/vsc";
+import "./App.css";
+import { Button } from "./components/ui/button";
+import { Input } from "./components/ui/input";
+import { Label } from "./components/ui/label";
 import Tooltip from "./components/ui/tooltip";
 import { cn } from "./lib/utils";
-import { Label } from "./components/ui/label";
-import { Input } from "./components/ui/input";
 
 const MEDIAS: Media[] = ["mobile", "tablet", "desktop"];
 type Media = "mobile" | "tablet" | "desktop";
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   const [media, setMedia] = useState<Media>(MEDIAS[2]);
   return (
     <section>
@@ -154,41 +149,41 @@ function App() {
 
 export default App;
 
-function Texts() {
-  return (
-    <>
-      <h1 className="text-6xl font-extrabold tracking-tight lg:text-5xl">
-        Add Heading 1
-      </h1>
-      <h2 className="text-5xl font-semibold tracking-tight ">Add Heading 2</h2>
-      <h3 className="text-4xl font-semibold tracking-tight">Add Heading 3</h3>
-      <h4 className="text-3xl font-semibold tracking-tight">Add Heading 4</h4>
-      <h5 className="leading-7 text-2xl">Add Heading 5</h5>
-      <h6 className="leading-7 text-xl">Add Heading 6</h6>
-      <p className="leading-7 text-lg">Add paragraph 1</p>
-      <p className="leading-7 text-base">Add paragraph 2</p>
-      <p className="leading-7 text-sm">Add small text</p>
-    </>
-  );
-}
+// function Texts() {
+//   return (
+//     <>
+//       <h1 className="text-6xl font-extrabold tracking-tight lg:text-5xl">
+//         Add Heading 1
+//       </h1>
+//       <h2 className="text-5xl font-semibold tracking-tight ">Add Heading 2</h2>
+//       <h3 className="text-4xl font-semibold tracking-tight">Add Heading 3</h3>
+//       <h4 className="text-3xl font-semibold tracking-tight">Add Heading 4</h4>
+//       <h5 className="leading-7 text-2xl">Add Heading 5</h5>
+//       <h6 className="leading-7 text-xl">Add Heading 6</h6>
+//       <p className="leading-7 text-lg">Add paragraph 1</p>
+//       <p className="leading-7 text-base">Add paragraph 2</p>
+//       <p className="leading-7 text-sm">Add small text</p>
+//     </>
+//   );
+// }
 
-function Buttons() {
-  return (
-    <div className="flex flex-wrap gap-4">
-      <Button>Filled Button</Button>
-      <Button variant="outline">Outline Button</Button>
-      <Button variant="link">Link Button</Button>
-      <Button className="rounded-3xl">Rounded Button</Button>
-      <Button variant="outline" className="rounded-3xl">
-        Outline Button
-      </Button>{" "}
-      <Button className="rounded-none"> Button</Button>
-      <Button variant="outline" className="rounded-none">
-        Button
-      </Button>
-    </div>
-  );
-}
+// function Buttons() {
+//   return (
+//     <div className="flex flex-wrap gap-4">
+//       <Button>Filled Button</Button>
+//       <Button variant="outline">Outline Button</Button>
+//       <Button variant="link">Link Button</Button>
+//       <Button className="rounded-3xl">Rounded Button</Button>
+//       <Button variant="outline" className="rounded-3xl">
+//         Outline Button
+//       </Button>{" "}
+//       <Button className="rounded-none"> Button</Button>
+//       <Button variant="outline" className="rounded-none">
+//         Button
+//       </Button>
+//     </div>
+//   );
+// }
 
 function Images() {
   return (
